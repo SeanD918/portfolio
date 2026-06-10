@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>R. IHEB | Software Engineer Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&amp;family=JetBrains+Mono:wght@400;600&amp;family=Hanken+Grotesk:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#e5e1e4",
+                        "secondary-fixed": "#ffe16d",
+                        "tertiary": "#fff5de",
+                        "surface-container-high": "#2a2a2c",
+                        "surface-tint": "#00dbe9",
+                        "secondary-fixed-dim": "#e9c400",
+                        "syntax-string": "#e9c400",
+                        "primary-fixed": "#7df4ff",
+                        "inverse-surface": "#e5e1e4",
+                        "tertiary-container": "#fed639",
+                        "on-secondary-container": "#725f00",
+                        "surface-bright": "#39393b",
+                        "on-tertiary-container": "#715d00",
+                        "primary-fixed-dim": "#00dbe9",
+                        "on-primary": "#00363a",
+                        "on-tertiary-fixed": "#231b00",
+                        "on-secondary-fixed-variant": "#544600",
+                        "on-error": "#690005",
+                        "surface-container-lowest": "#0e0e10",
+                        "primary-container": "#00f0ff",
+                        "surface-container-low": "#1b1b1d",
+                        "on-primary-fixed-variant": "#004f54",
+                        "surface-container": "#1f1f21",
+                        "error": "#ffb4ab",
+                        "on-primary-fixed": "#002022",
+                        "outline-variant": "#3b494b",
+                        "surface-variant": "#353437",
+                        "on-primary-container": "#006970",
+                        "tertiary-fixed-dim": "#eac324",
+                        "surface": "#131315",
+                        "on-tertiary-fixed-variant": "#554500",
+                        "surface-dim": "#131315",
+                        "syntax-function": "#00dbe9",
+                        "syntax-keyword": "#dbfcff",
+                        "outline": "#849495",
+                        "inverse-on-surface": "#303032",
+                        "background": "#131315",
+                        "inverse-primary": "#006970",
+                        "error-container": "#93000a",
+                        "secondary": "#fff9ef",
+                        "on-tertiary": "#3b2f00",
+                        "surface-container-highest": "#353437",
+                        "on-error-container": "#ffdad6",
+                        "syntax-comment": "#849495",
+                        "on-secondary": "#3a3000",
+                        "on-background": "#e5e1e4",
+                        "on-surface-variant": "#b9cacb",
+                        "primary": "#dbfcff",
+                        "tertiary-fixed": "#ffe179",
+                        "secondary-container": "#ffdb3c",
+                        "on-secondary-fixed": "#221b00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "xs": "8px",
+                        "base": "4px",
+                        "sm": "16px",
+                        "container-max": "1280px",
+                        "xl": "80px",
+                        "md": "24px",
+                        "lg": "48px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Hanken Grotesk"],
+                        "label-caps": ["JetBrains Mono"],
+                        "display-xl-mobile": ["Montserrat"],
+                        "headline-md": ["Montserrat"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "display-xl": ["Montserrat"],
+                        "code-sm": ["JetBrains Mono"],
+                        "headline-lg": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-xl-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "800"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "code-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(28, 27, 29, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-cyan {
+            box-shadow: 0 0 15px rgba(0, 219, 233, 0.15);
+        }
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .active-tab-indicator::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #00dbe9;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl border-b border-white/10 shadow-[0_0_15px_rgba(0,219,233,0.05)]">
+<div class="flex justify-between items-center h-16 px-gutter max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-fixed-dim hover:brightness-110 active:scale-95 transition-all cursor-pointer">menu</span>
+<span class="font-display-xl text-primary font-extrabold tracking-tighter text-[24px]">R. IHEB</span>
+</div>
+<nav class="hidden md:flex items-center gap-8 font-label-caps text-label-caps">
+<a class="relative text-primary-fixed font-bold active-tab-indicator transition-colors" href="#">Home</a>
+<a class="text-on-surface-variant hover:text-primary-fixed-dim transition-colors" href="#">About</a>
+<a class="text-on-surface-variant hover:text-primary-fixed-dim transition-colors" href="#">Skills</a>
+<a class="text-on-surface-variant hover:text-primary-fixed-dim transition-colors" href="#">Timeline</a>
+<a class="text-on-surface-variant hover:text-primary-fixed-dim transition-colors" href="#">Projects</a>
+<a class="text-on-surface-variant hover:text-primary-fixed-dim transition-colors" href="#">Contact</a>
+</nav>
+<span class="material-symbols-outlined text-primary-fixed-dim hover:brightness-110 active:scale-95 transition-all cursor-pointer">terminal</span>
+</div>
+</header>
+<!-- Hero Section -->
+<main class="relative min-h-screen pt-16 flex flex-col items-center justify-center overflow-hidden">
+
+<div class="relative z-10 w-full max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-lg items-center min-h-[calc(100vh-64px)]">
+<!-- Left: Bio -->
+<div class="flex flex-col gap-sm">
+<div class="flex items-center gap-xs">
+<div class="w-12 h-px bg-primary-fixed-dim"></div>
+<span class="material-symbols-outlined text-primary-fixed-dim text-[18px]">auto_awesome</span>
+<span class="font-label-caps text-label-caps text-primary-fixed">R. IHEB</span>
+</div>
+<h1 class="font-display-xl text-display-xl-mobile md:text-display-xl text-on-surface leading-tight">
+                    Crafting Scalable <span class="text-primary-fixed-dim">Web Systems</span> &amp; Immersive <span class="text-secondary-fixed">Mobile Apps</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    Computer Science &amp; Software Engineering student specializing in responsive fullstack web development (React, Node.js) and high-fidelity cross-platform mobile apps (React Native).
+                </p>
+<div class="flex flex-wrap gap-md mt-lg">
+<button class="px-8 py-4 bg-primary-container text-on-primary-container font-label-caps text-label-caps rounded-sm glow-cyan hover:brightness-110 active:scale-95 transition-all flex items-center gap-2">
+                        Explore Projects
+                        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="px-8 py-4 border border-primary-fixed-dim text-primary-fixed-dim font-label-caps text-label-caps rounded-sm hover:bg-primary-fixed-dim/10 active:scale-95 transition-all">
+                        Get In Touch
+                    </button>
+</div>
+</div>
+<!-- Right: Profile Picture -->
+<div class="flex justify-center md:justify-end items-center">
+<div class="relative w-72 h-72 md:w-96 md:h-96 group">
+<div class="absolute inset-0 bg-primary-fixed-dim/20 rounded-full blur-3xl group-hover:bg-primary-fixed-dim/30 transition-all duration-700 animate-pulse"></div>
+<div class="relative w-full h-full rounded-full border-2 border-primary-fixed-dim/30 p-4 overflow-hidden animate-float">
+<img alt="R. IHEB" class="w-full h-full object-cover rounded-full filter grayscale hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWx0OEzS14AwzrpVk4kEQ6eSeeQpJTPMD-9DU6HIxW3NOxhNOKTaKMsdf2ZaDluv5lazjN4hLDcyHgkJF3fR1Fh95rMTbAci2EX-N_yIXGWTFBZwY7Wm3UjmqtAnysC2KxhT008tdqjY4l4uiTZdYrQ45I7i6_v1S4oEJ_6ikfYjEwuXubyr6NErCzN_BrnJ8UK5KIlUGOYITAYm2cmz81_p7xQV8-EuUXIkt_Q1YfLRTNxoGO-ytW6UILW8Io7OENvucZaL8_yIE"/>
+</div>
+<!-- Technical Decorations -->
+<div class="absolute -top-4 -right-4 w-16 h-16 glass-panel flex items-center justify-center rounded-lg border border-primary-fixed-dim/50 animate-bounce">
+<span class="material-symbols-outlined text-primary-fixed-dim">code</span>
+</div>
+<div class="absolute -bottom-2 -left-4 w-20 h-20 glass-panel flex items-center justify-center rounded-lg border border-secondary-fixed/50" style="animation: float 4s ease-in-out infinite;">
+<span class="material-symbols-outlined text-secondary-fixed">smartphone</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Capabilities Sections -->
+<section class="relative py-xl bg-surface-container-lowest" id="capabilities">
+<div class="max-w-container-max mx-auto px-gutter flex flex-col gap-xl">
+<!-- Web Systems Section -->
+<div class="scroll-reveal grid grid-cols-1 md:grid-cols-12 gap-lg items-center">
+<div class="md:col-span-7 glass-panel p-md md:p-lg rounded-xl flex flex-col gap-sm order-2 md:order-1">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary-fixed-dim">lan</span>
+<span class="font-label-caps text-label-caps text-primary-fixed-dim">ARCHITECTURE &amp; SCALE</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Web Systems</h2>
+<p class="text-on-surface-variant font-body-md">
+                        Building robust backends and dynamic frontends that handle complexity with grace. From microservices architecture to SEO-optimized single-page applications, I bridge the gap between heavy-duty data and pixel-perfect interfaces.
+                    </p>
+<div class="flex flex-wrap gap-xs mt-sm">
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full font-label-caps text-[10px] text-on-surface-variant">NODE.JS</span>
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full font-label-caps text-[10px] text-on-surface-variant">REACT</span>
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full font-label-caps text-[10px] text-on-surface-variant">POSTGRESQL</span>
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full font-label-caps text-[10px] text-on-surface-variant">AWS</span>
+</div>
+</div>
+<div class="md:col-span-5 order-1 md:order-2 h-64 md:h-80 overflow-hidden rounded-xl border border-white/10">
+<img class="w-full h-full object-cover" data-alt="A macro photograph of high-end server hardware in a data center, illuminated by futuristic cyan and deep blue LED lights. The composition highlights the technical precision of circuit boards and networking cables in a clean, dark-mode tech aesthetic. The atmosphere is sophisticated, suggesting immense computing power and scalable infrastructure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU9eF_ZGeOdxy0Zfg_uv2OC9RLyIpJnxu5SSl5KyqmSaw2saPEUbfBCDd7po8OuiiNV0dofM0ba5IxpSb3DpqXhEmwOQRTZD-5mGuh-6p6p8LUb_FOVXfOA0xDXadxxapzTc_N0ChLpb5rICcESlUo7m6CXgptdcd37ek7ruzupmgdqUrAGmydu_tjyEsz3UVgDQ0HBKu_h2egQzXaFr_Ax_tsQGsa5N9oFAbY5qhS0FZ2W5_VvR7_Hhq3cKdtVIsQIRMUf6Ob0Kg"/>
+</div>
+</div>
+<!-- Mobile Apps Section -->
+<div class="scroll-reveal grid grid-cols-1 md:grid-cols-12 gap-lg items-center">
+<div class="md:col-span-5 h-64 md:h-80 overflow-hidden rounded-xl border border-white/10">
+<img class="w-full h-full object-cover" data-alt="A modern smartphone displaying a vibrant, high-fidelity user interface with dark-mode elements and glowing accent colors. The device is placed on a minimalist desk surface with soft, cinematic lighting that creates a professional developer workspace vibe. The scene uses a palette of deep blacks, charcoal greys, and vibrant cyan indicators to reflect a cyber-glassmorphism design style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDONcTfVseZ5tfvOddGO72tfK4g7wdAXGfvg6WIsNXyFJkdUYNH49zy-fwk-q9Xv8IjZUidqgWT-6f6oVnwky_DgMbOAcs7daH5T-phEjx5ev8yW3kWPIWEAXBLH-7m6TrfMRxI_OP3yJDgl3MFtqty-nD1PhGs0Dx3XYpArdEffys67T3nle0vpFxosH74SrD5WrAXHAD2PFQh4RQvLjWa6wrtY7dWunznREWlNsM2JWwYhw4V-0PI0TF_I_jl-l6DSKMfcruz71o"/>
+</div>
+<div class="md:col-span-7 glass-panel p-md md:p-lg rounded-xl flex flex-col gap-sm">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-secondary-fixed">touch_app</span>
+<span class="font-label-caps text-label-caps text-secondary-fixed">NATIVE EXPERIENCES</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Mobile Apps</h2>
+<p class="text-on-surface-variant font-body-md">
+                        Delivering buttery-smooth performance and native-feeling interactions across iOS and Android. My approach focuses on ergonomic design, offline-first capabilities, and expressive animations that define modern mobile luxury.
+                    </p>
+<div class="flex flex-wrap gap-xs mt-sm">
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full font-label-caps text-[10px] text-on-surface-variant">REACT NATIVE</span>
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full font-label-caps text-[10px] text-on-surface-variant">EXPO</span>
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full font-label-caps text-[10px] text-on-surface-variant">FIREBASE</span>
+<span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full font-label-caps text-[10px] text-on-surface-variant">REANIMATED</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Navigation Drawer (Mobile) -->
+<div class="fixed inset-y-0 left-0 w-80 z-[60] bg-surface-container-low border-r border-white/10 shadow-2xl translate-x-[-100%] transition-transform duration-300 ease-in-out" id="mobile-drawer">
+<div class="flex flex-col h-full py-8">
+<div class="px-gutter mb-8 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-display-xl text-primary font-bold text-[24px]">R. IHEB</span>
+<span class="text-on-surface-variant text-[12px]">Software Engineer</span>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant" onclick="toggleDrawer()">close</button>
+</div>
+<nav class="flex flex-col gap-2 px-4">
+<a class="flex items-center gap-4 bg-primary-container text-on-primary-container rounded-full px-4 py-3 border-l-4 border-primary-fixed transition-all" href="#">
+<span class="material-symbols-outlined">code</span>
+<span class="font-label-caps text-label-caps">Code</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined">terminal</span>
+<span class="font-label-caps text-label-caps">Work</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label-caps text-label-caps">Timeline</span>
+</a>
+<a class="flex items-center gap-4 text-on-surface-variant px-4 py-3 hover:bg-white/5 transition-all" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+<span class="font-label-caps text-label-caps">Contact</span>
+</a>
+</nav>
+<div class="mt-auto px-gutter pt-8 border-t border-white/5 text-on-surface-variant opacity-40 text-[10px]">
+                v2.4.0 • Built with Precision
+            </div>
+</div>
+</div>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 bg-surface/80 backdrop-blur-lg border-t border-white/10 shadow-[0_-4px_20px_rgba(0,0,0,0.4)] flex justify-around items-center h-20 pb-safe px-4">
+<div class="flex flex-col items-center justify-center text-primary-fixed scale-110 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined">code</span>
+<span class="font-label-caps text-[10px] mt-1">Code</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 hover:opacity-100 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined">terminal</span>
+<span class="font-label-caps text-[10px] mt-1">Work</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 hover:opacity-100 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined">history</span>
+<span class="font-label-caps text-[10px] mt-1">Timeline</span>
+</div>
+<div class="flex flex-col items-center justify-center text-on-surface-variant opacity-60 hover:opacity-100 active:scale-90 transition-transform duration-200">
+<span class="material-symbols-outlined">alternate_email</span>
+<span class="font-label-caps text-[10px] mt-1">Contact</span>
+</div>
+</nav>
+<script>
+        // Intersection Observer for Scroll Reveals
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
+
+        // Mobile Drawer Logic
+        function toggleDrawer() {
+            const drawer = document.getElementById('mobile-drawer');
+            const isOpen = drawer.style.transform === 'translateX(0%)';
+            drawer.style.transform = isOpen ? 'translateX(-100%)' : 'translateX(0%)';
+        }
+
+        // Trigger drawer on menu icon click (mapped to the first icon in header)
+        document.querySelector('.material-symbols-outlined').addEventListener('click', (e) => {
+            if (e.target.innerText === 'menu') toggleDrawer();
+        });
+
+        // Atmospheric Effect: Particle Mouse Follow
+        const main = document.querySelector('main');
+        main.addEventListener('mousemove', (e) => {
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            // Subtle shift in the background shader intensity or focus could be simulated here
+            // But we rely on the webgl-shader tag for the primary atmosphere
+        });
+    </script>
+</body></html>

@@ -150,8 +150,8 @@ export default function Hero() {
               </button>
 
               <a
-                href="/cv.pdf"
-                download="R_Iheb_CV.pdf"
+                href="/CV_R_IHEB.pdf"
+                download="CV_R_IHEB.pdf"
                 className={`px-8 py-4 border-2 font-label-caps text-[11px] tracking-widest uppercase font-bold rounded-lg hover:scale-105 active:scale-95 transition-all flex items-center gap-2 select-none ${
                   isDark
                     ? 'border-primary-fixed-dim text-primary-fixed-dim hover:bg-primary-fixed-dim/10'

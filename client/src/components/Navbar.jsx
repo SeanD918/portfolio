@@ -53,11 +53,11 @@ export default function Navbar() {
       <header
         id="main-navbar"
         className={`fixed top-0 w-full z-50 transition-all duration-500 ease-in-out ${isScrolled
-            ? `${isDark
-              ? 'bg-surface/85 backdrop-blur-xl border-b border-primary-fixed-dim/15 shadow-[0_4px_30px_rgba(0,0,0,0.5)]'
-              : 'bg-white/90 backdrop-blur-xl border-b border-brand-blue/10 shadow-[0_4px_20px_rgba(0,0,0,0.08)]'
-            } h-14`
-            : 'bg-transparent border-b border-transparent shadow-none h-16'
+          ? `${isDark
+            ? 'bg-surface/85 backdrop-blur-xl border-b border-primary-fixed-dim/15 shadow-[0_4px_30px_rgba(0,0,0,0.5)]'
+            : 'bg-white/90 backdrop-blur-xl border-b border-brand-blue/10 shadow-[0_4px_20px_rgba(0,0,0,0.08)]'
+          } h-14`
+          : 'bg-transparent border-b border-transparent shadow-none h-16'
           }`}
       >
         <div className="flex justify-between items-center h-full px-gutter max-w-container-max mx-auto">
@@ -94,12 +94,12 @@ export default function Navbar() {
                 key={item.id}
                 href={`#${item.id}`}
                 className={`relative py-1 transition-all duration-300 select-none font-semibold text-[11px] tracking-widest uppercase ${activeSection === item.id
-                    ? isDark
-                      ? 'text-primary-fixed active-tab-indicator drop-shadow-[0_0_8px_rgba(0,219,233,0.4)]'
-                      : 'text-brand-blue active-tab-indicator'
-                    : isDark
-                      ? 'text-on-surface-variant hover:text-primary-fixed-dim'
-                      : 'text-gray-500 hover:text-brand-blue'
+                  ? isDark
+                    ? 'text-primary-fixed active-tab-indicator drop-shadow-[0_0_8px_rgba(0,219,233,0.4)]'
+                    : 'text-brand-blue active-tab-indicator'
+                  : isDark
+                    ? 'text-on-surface-variant hover:text-primary-fixed-dim'
+                    : 'text-gray-500 hover:text-brand-blue'
                   }`}
                 onClick={(e) => handleNavClick(item.id, e)}
               >
@@ -126,11 +126,11 @@ export default function Navbar() {
 
             {/* Download CV */}
             <a
-              href="/CV (1).pdf.pdf"
-              download="R_Iheb_CV.pdf"
+              href="/CV_R_IHEB.pdf"
+              download="CV_R_IHEB.pdf"
               className={`hidden sm:flex items-center gap-1.5 font-label-caps text-[10px] tracking-widest uppercase active:scale-95 transition-all select-none border rounded px-3 py-1.5 font-bold ${isDark
-                  ? 'text-primary-fixed-dim hover:text-primary border-primary-fixed-dim/20 hover:border-primary-fixed-dim/50 bg-primary-fixed-dim/5 hover:bg-primary-fixed-dim/10'
-                  : 'text-brand-blue hover:text-white border-brand-blue/30 hover:border-brand-blue bg-brand-blue/5 hover:bg-brand-blue'
+                ? 'text-primary-fixed-dim hover:text-primary border-primary-fixed-dim/20 hover:border-primary-fixed-dim/50 bg-primary-fixed-dim/5 hover:bg-primary-fixed-dim/10'
+                : 'text-brand-blue hover:text-white border-brand-blue/30 hover:border-brand-blue bg-brand-blue/5 hover:bg-brand-blue'
                 }`}
               title="Download CV"
             >
@@ -144,8 +144,8 @@ export default function Navbar() {
       {/* ── Navigation Drawer (Mobile) ── */}
       <div
         className={`fixed inset-y-0 left-0 w-80 z-[60] backdrop-blur-2xl border-r shadow-2xl transition-transform duration-300 ease-in-out ${isDark
-            ? 'bg-surface-container-low/95 border-primary-fixed-dim/20'
-            : 'bg-white/97 border-brand-blue/10'
+          ? 'bg-surface-container-low/95 border-primary-fixed-dim/20'
+          : 'bg-white/97 border-brand-blue/10'
           } ${isDrawerOpen ? 'translate-x-0' : '-translate-x-full'}`}
       >
         <div className="flex flex-col h-full py-8">
@@ -169,8 +169,8 @@ export default function Navbar() {
             </div>
             <button
               className={`w-10 h-10 flex items-center justify-center rounded-full border transition-all group active:scale-90 ${isDark
-                  ? 'border-white/5 bg-white/5 text-on-surface-variant hover:text-white hover:border-white/20'
-                  : 'border-gray-200 bg-gray-50 text-gray-400 hover:text-gray-700 hover:border-gray-300'
+                ? 'border-white/5 bg-white/5 text-on-surface-variant hover:text-white hover:border-white/20'
+                : 'border-gray-200 bg-gray-50 text-gray-400 hover:text-gray-700 hover:border-gray-300'
                 }`}
               onClick={() => setIsDrawerOpen(false)}
               aria-label="Close menu"
@@ -187,18 +187,18 @@ export default function Navbar() {
                   key={item.id}
                   href={`#${item.id}`}
                   className={`flex items-center gap-4 rounded-lg px-4 py-3 transition-all duration-300 group ${isActive
-                      ? isDark
-                        ? 'bg-primary-fixed-dim/10 text-primary-fixed border-l-2 border-primary-fixed-dim font-bold'
-                        : 'bg-brand-blue/8 text-brand-blue border-l-2 border-brand-blue font-bold'
-                      : isDark
-                        ? 'text-on-surface-variant hover:bg-white/5 hover:text-white hover:translate-x-1'
-                        : 'text-gray-500 hover:bg-gray-100 hover:text-brand-blue hover:translate-x-1'
+                    ? isDark
+                      ? 'bg-primary-fixed-dim/10 text-primary-fixed border-l-2 border-primary-fixed-dim font-bold'
+                      : 'bg-brand-blue/8 text-brand-blue border-l-2 border-brand-blue font-bold'
+                    : isDark
+                      ? 'text-on-surface-variant hover:bg-white/5 hover:text-white hover:translate-x-1'
+                      : 'text-gray-500 hover:bg-gray-100 hover:text-brand-blue hover:translate-x-1'
                     }`}
                   onClick={(e) => handleNavClick(item.id, e)}
                 >
                   <span className={`material-symbols-outlined text-[20px] transition-colors duration-300 ${isActive
-                      ? isDark ? 'text-primary-fixed-dim' : 'text-brand-blue'
-                      : isDark ? 'text-on-surface-variant/70 group-hover:text-primary-fixed-dim' : 'text-gray-400 group-hover:text-brand-blue'
+                    ? isDark ? 'text-primary-fixed-dim' : 'text-brand-blue'
+                    : isDark ? 'text-on-surface-variant/70 group-hover:text-primary-fixed-dim' : 'text-gray-400 group-hover:text-brand-blue'
                     }`}>{item.icon}</span>
                   <span className="font-label-caps text-[11px] tracking-widest uppercase">{item.label}</span>
                 </a>
@@ -211,8 +211,8 @@ export default function Navbar() {
             <button
               onClick={toggleTheme}
               className={`flex items-center gap-3 w-full px-4 py-3 rounded-lg border transition-all ${isDark
-                  ? 'border-white/5 bg-white/5 hover:bg-white/10'
-                  : 'border-gray-200 bg-gray-50 hover:bg-gray-100'
+                ? 'border-white/5 bg-white/5 hover:bg-white/10'
+                : 'border-gray-200 bg-gray-50 hover:bg-gray-100'
                 }`}
             >
               <span className={`material-symbols-outlined text-[20px] ${isDark ? 'text-primary-fixed-dim' : 'text-brand-blue'}`}>
@@ -241,8 +241,8 @@ export default function Navbar() {
 
       {/* ── Bottom Nav Bar (Mobile Only) ── */}
       <nav className={`md:hidden fixed bottom-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-lg z-50 backdrop-blur-xl border rounded-full shadow-[0_10px_30px_rgba(0,0,0,0.3)] flex justify-around items-center h-16 px-2 ${isDark
-          ? 'bg-surface/85 border-white/10'
-          : 'bg-white/92 border-gray-200/80'
+        ? 'bg-surface/85 border-white/10'
+        : 'bg-white/92 border-gray-200/80'
         }`}>
         {navItems.map((item) => {
           const isActive = activeSection === item.id;
@@ -250,8 +250,8 @@ export default function Navbar() {
             <div
               key={item.id}
               className={`flex flex-col items-center justify-center flex-1 h-full py-1 transition-all duration-300 relative cursor-pointer group select-none ${isActive
-                  ? isDark ? 'text-primary-fixed' : 'text-brand-blue'
-                  : isDark ? 'text-on-surface-variant/70 hover:text-white' : 'text-gray-400 hover:text-brand-blue'
+                ? isDark ? 'text-primary-fixed' : 'text-brand-blue'
+                : isDark ? 'text-on-surface-variant/70 hover:text-white' : 'text-gray-400 hover:text-brand-blue'
                 }`}
               onClick={(e) => handleNavClick(item.id, e)}
             >

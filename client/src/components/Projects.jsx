@@ -16,20 +16,20 @@ export default function Projects() {
   const projectsData = [
     {
       id: 1, category: 'web',
-      title: 'IoT Telemetry Dashboard',
-      desc: 'A real-time metrics visualizer displaying sensor logs from microcontrollers over WebSockets.',
-      longDesc: 'Designed a highly responsive web interface displaying temperature, voltage, and motor rpm metrics. Connects to an Express server backed by PostgreSQL, using Socket.io to push real-time streams and Chart.js to render telemetry timelines.',
-      challenge: 'UI lag and database bottlenecks when dealing with 100+ telemetry writes per second.',
-      solution: 'Implemented a Redis write-buffer that batches queries every 5 seconds. Used React throttle listeners to prevent excessive re-renders.',
+      title: 'AI Biometric Recognition',
+      desc: 'An advanced, multi-task computer vision platform that leverages deep learning for real-time biometric tracking, gender estimation, animals recgonition, and American Sign Language (ASL) translation.',
+      longDesc: 'Designed a high-performance web interface integrating real-time computer vision models for simultaneous biometric tracking. Connects to a robust backend server to process live video streams, instantly executing facial analysis, gender estimation, and American Sign Language (ASL) gesture decoding through a seamless, low-latency data pipeline.',
+      challenge: 'High CPU usage, frame-rate drops, and UI lag when handling simultaneous real-time video processing streams and multi-task model predictions in the browser.',
+      solution: 'Optimized inference pipelines by implementing web workers for asynchronous frame processing. Maintained a fluid 60 FPS UI by throttling state updates and leveraging efficient landmark tracking coordinates.',
       specs: [
         { label: 'Frontend', val: 'React 19, Chart.js' },
         { label: 'Backend', val: 'Node.js, Express' },
-        { label: 'Database', val: 'PostgreSQL, Redis' },
+        { label: 'Database', val: 'PostgreSQL, Redis ,Mongodb' },
         { label: 'Protocol', val: 'WebSockets (Socket.io)' }
       ],
       tags: ['REACT', 'NODE.JS', 'POSTGRESQL', 'SOCKET.IO'],
-      github: 'https://github.com/iheb-dev/iot-dashboard',
-      demo: '#'
+      github: '#',
+      demo: 'https://ai-recognition-gules.vercel.app/'
     },
     {
       id: 2, category: 'mobile',
@@ -145,9 +145,8 @@ export default function Projects() {
           {[['all', 'All Projects'], ['web', 'Web Development'], ['mobile', 'Mobile Development']].map(([val, label]) => (
             <button
               key={val}
-              className={`px-5 py-2 rounded-full font-label-caps text-[10px] tracking-widest uppercase border transition-all ${
-                filter === val ? activeBtn : inactiveBtn
-              }`}
+              className={`px-5 py-2 rounded-full font-label-caps text-[10px] tracking-widest uppercase border transition-all ${filter === val ? activeBtn : inactiveBtn
+                }`}
               style={filter === val && !isDark ? {
                 backgroundImage: 'linear-gradient(135deg, #1e30f3, #e21e80)',
                 borderColor: 'transparent'
@@ -162,9 +161,8 @@ export default function Projects() {
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className={`glass-panel p-md rounded-xl flex flex-col gap-sm transition-all duration-300 relative group hover-lift ${
-                isDark ? 'hover:border-white/20' : 'hover:border-gray-200'
-              }`}
+              className={`glass-panel p-md rounded-xl flex flex-col gap-sm transition-all duration-300 relative group hover-lift ${isDark ? 'hover:border-white/20' : 'hover:border-gray-200'
+                }`}
             >
               <div className={`flex justify-between items-center border-b pb-sm ${isDark ? 'border-white/5' : 'border-gray-100'}`}>
                 <div className="flex items-center gap-xs">
@@ -197,18 +195,16 @@ export default function Projects() {
 
               <div className="flex flex-wrap gap-xs mt-sm pb-md">
                 {project.tags.map((tag, idx) => (
-                  <span key={idx} className={`px-2.5 py-0.5 rounded-full font-label-caps text-[9px] tracking-widest uppercase border ${
-                    isDark ? 'bg-white/5 border-white/10 text-on-surface-variant' : 'bg-gray-100 border-gray-200 text-gray-500'
-                  }`}>{tag}</span>
+                  <span key={idx} className={`px-2.5 py-0.5 rounded-full font-label-caps text-[9px] tracking-widest uppercase border ${isDark ? 'bg-white/5 border-white/10 text-on-surface-variant' : 'bg-gray-100 border-gray-200 text-gray-500'
+                    }`}>{tag}</span>
                 ))}
               </div>
 
               <button
-                className={`px-6 py-2.5 border font-label-caps text-[10px] tracking-widest uppercase rounded-lg active:scale-95 transition-all w-fit mt-auto font-bold ${
-                  isDark
-                    ? 'border-primary-fixed-dim/30 text-primary-fixed-dim hover:bg-primary-fixed-dim/10'
-                    : 'border-brand-blue/30 text-brand-blue hover:bg-brand-blue/5'
-                }`}
+                className={`px-6 py-2.5 border font-label-caps text-[10px] tracking-widest uppercase rounded-lg active:scale-95 transition-all w-fit mt-auto font-bold ${isDark
+                  ? 'border-primary-fixed-dim/30 text-primary-fixed-dim hover:bg-primary-fixed-dim/10'
+                  : 'border-brand-blue/30 text-brand-blue hover:bg-brand-blue/5'
+                  }`}
                 onClick={() => setSelectedProject(project)}
               >
                 Learn More
@@ -225,15 +221,13 @@ export default function Projects() {
           onClick={() => setSelectedProject(null)}
         >
           <div
-            className={`glass-panel max-w-2xl w-full p-md md:p-lg rounded-xl flex flex-col gap-md relative max-h-[90vh] overflow-y-auto ${
-              isDark ? '' : 'border-gray-200 shadow-2xl'
-            }`}
+            className={`glass-panel max-w-2xl w-full p-md md:p-lg rounded-xl flex flex-col gap-md relative max-h-[90vh] overflow-y-auto ${isDark ? '' : 'border-gray-200 shadow-2xl'
+              }`}
             onClick={(e) => e.stopPropagation()}
           >
             <button
-              className={`absolute top-4 right-4 material-symbols-outlined cursor-pointer transition-colors ${
-                isDark ? 'text-on-surface-variant hover:text-white' : 'text-gray-400 hover:text-gray-700'
-              }`}
+              className={`absolute top-4 right-4 material-symbols-outlined cursor-pointer transition-colors ${isDark ? 'text-on-surface-variant hover:text-white' : 'text-gray-400 hover:text-gray-700'
+                }`}
               onClick={() => setSelectedProject(null)}
             >close</button>
 
@@ -260,9 +254,8 @@ export default function Projects() {
 
               <div className="md:col-span-5 flex flex-col gap-sm">
                 <h4 className={`font-bold text-[14px] ${isDark ? 'text-on-surface' : 'text-gray-900'}`}>Technical Specs</h4>
-                <div className={`flex flex-col gap-xs border p-sm rounded-lg font-mono text-[12px] ${
-                  isDark ? 'bg-white/5 border-white/10' : 'bg-gray-50 border-gray-200'
-                }`}>
+                <div className={`flex flex-col gap-xs border p-sm rounded-lg font-mono text-[12px] ${isDark ? 'bg-white/5 border-white/10' : 'bg-gray-50 border-gray-200'
+                  }`}>
                   {selectedProject.specs.map((spec, idx) => (
                     <div key={idx} className={`flex flex-col border-b pb-xs last:border-b-0 last:pb-0 ${isDark ? 'border-white/5' : 'border-gray-100'}`}>
                       <span className={`text-[10px] ${isDark ? 'text-on-surface-variant' : 'text-gray-400'}`}>{spec.label}</span>
@@ -278,9 +271,8 @@ export default function Projects() {
                     <GithubIcon size={12} /> Code
                   </a>
                   <a href={selectedProject.demo} target="_blank" rel="noreferrer"
-                    className={`flex-grow flex items-center justify-center gap-2 px-4 py-2.5 border font-label-caps text-[11px] tracking-widest uppercase rounded-lg active:scale-95 transition-all font-bold ${
-                      isDark ? 'border-primary-fixed-dim text-primary-fixed-dim hover:bg-primary-fixed-dim/10' : 'border-brand-blue text-brand-blue hover:bg-brand-blue/5'
-                    }`}>
+                    className={`flex-grow flex items-center justify-center gap-2 px-4 py-2.5 border font-label-caps text-[11px] tracking-widest uppercase rounded-lg active:scale-95 transition-all font-bold ${isDark ? 'border-primary-fixed-dim text-primary-fixed-dim hover:bg-primary-fixed-dim/10' : 'border-brand-blue text-brand-blue hover:bg-brand-blue/5'
+                      }`}>
                     Demo
                   </a>
                 </div>

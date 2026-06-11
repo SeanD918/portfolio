@@ -127,8 +127,8 @@ export default function Hero() {
               <span style={gradientStyle}>Mobile Apps</span>
             </h1>
 
-            <p className={`font-body-lg text-body-lg max-w-xl ${isDark ? 'text-on-surface-variant' : 'text-gray-500'}`}>
-              Computer Science &amp; Software Engineering student specializing in responsive
+            <p className="font-body-lg text-body-lg max-w-xl text-on-surface-variant">
+              Software Engineering &amp; Information Systems student specializing in responsive
               fullstack web development (React, Node.js) and high-fidelity cross-platform
               mobile apps (React Native).
             </p>

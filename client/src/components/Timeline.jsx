@@ -33,13 +33,13 @@ export default function Timeline() {
   const events = [
     {
       id: 1,
-      type: 'web',
-      date: 'Jun 2025 - Aug 2025',
-      title: 'Fullstack Web Developer Intern',
-      org: 'ByteCraft Software Solutions',
-      desc: 'Developed and optimized client-facing analytical dashboards using React, Express, and PostgreSQL. Revamped backend REST routes and optimized indexing, leading to a 30% reduction in database query latency.',
-      badge: 'Internship',
-      icon: 'work',
+      type: 'education',
+      date: 'Sep 2024 - Present',
+      title: 'B.S. in Software Engineering & Information Systems',
+      org: 'Faculty of Sciences and Technology – Sidi Bouzid (FST-SBz)',
+      desc: 'Currently pursuing a degree focused on software design, database systems, and modern information architectures at FST-SBz.',
+      badge: 'Education',
+      icon: 'education',
       accent: isDark ? 'text-primary-fixed-dim border-primary-fixed-dim/30 bg-primary-fixed-dim/10' : 'text-brand-blue border-brand-blue/20 bg-brand-blue/6',
       nodeColor: isDark ? 'bg-primary-fixed-dim' : 'bg-brand-blue',
       glowColor: isDark ? 'rgba(0,219,233,0.4)' : 'rgba(30,48,243,0.3)'
@@ -47,9 +47,9 @@ export default function Timeline() {
     {
       id: 2,
       type: 'robotics',
-      date: 'Nov 2024',
+      date: 'Apr 2024',
       title: 'Autonomous Robotics Hackathon - 2nd Place',
-      org: 'State Engineering Arena (48-Hour Hackathon)',
+      org: 'State Engineering Arena (24-Hour Hackathon)',
       desc: 'Collaborated in a team of three to assemble and program an autonomous maze-solving mobile rover. Wrote real-time C++ pathfinding algorithms and calibrated PID controllers to handle high-speed wheel motion.',
       badge: 'Competition',
       icon: 'emoji_events',
@@ -69,20 +69,8 @@ export default function Timeline() {
       accent: isDark ? 'text-primary-fixed border-primary-fixed/30 bg-primary-fixed/10' : 'text-brand-blue border-brand-blue/20 bg-brand-blue/6',
       nodeColor: isDark ? 'bg-primary-fixed' : 'bg-brand-blue',
       glowColor: isDark ? 'rgba(125,244,255,0.4)' : 'rgba(30,48,243,0.3)'
-    },
-    {
-      id: 4,
-      type: 'academic',
-      date: 'Sept 2023 - Present',
-      title: 'B.S. in Computer Science & Engineering',
-      org: 'State Tech University',
-      desc: 'Specializing in Software Architecture, Real-Time Operating Systems, and Distributed Databases. Current GPA: 3.82/4.0. Active member of IEEE Student Chapter.',
-      badge: 'Education',
-      icon: 'school',
-      accent: isDark ? 'text-outline border-outline/30 bg-outline/10' : 'text-gray-500 border-gray-300 bg-gray-100',
-      nodeColor: isDark ? 'bg-outline' : 'bg-gray-400',
-      glowColor: 'rgba(132,148,149,0.3)'
     }
+
   ];
 
   const gradientText = {
@@ -96,9 +84,8 @@ export default function Timeline() {
   };
 
   return (
-    <section id="timeline" className={`relative py-xl border-t ${
-      isDark ? 'bg-surface-container-lowest border-white/10' : 'bg-white border-gray-100'
-    }`}>
+    <section id="timeline" className={`relative py-xl border-t ${isDark ? 'bg-surface-container-lowest border-white/10' : 'bg-white border-gray-100'
+      }`}>
       <div className="max-w-container-max mx-auto px-gutter flex flex-col gap-lg">
 
         {/* Section Header */}
@@ -112,11 +99,10 @@ export default function Timeline() {
         </div>
 
         {/* Timeline List */}
-        <div className={`relative max-w-3xl mx-auto mt-md pl-12 before:absolute before:w-0.5 before:left-4 before:top-2 before:bottom-2 before:rounded-full ${
-          isDark
-            ? 'before:bg-gradient-to-b before:from-primary-fixed-dim/60 before:via-white/10 before:to-transparent'
-            : 'before:bg-gradient-to-b before:from-brand-blue/40 before:via-gray-200 before:to-transparent'
-        }`}>
+        <div className={`relative max-w-3xl mx-auto mt-md pl-12 before:absolute before:w-0.5 before:left-4 before:top-2 before:bottom-2 before:rounded-full ${isDark
+          ? 'before:bg-gradient-to-b before:from-primary-fixed-dim/60 before:via-white/10 before:to-transparent'
+          : 'before:bg-gradient-to-b before:from-brand-blue/40 before:via-gray-200 before:to-transparent'
+          }`}>
           {events.map((event, idx) => (
             <div
               key={event.id}
@@ -125,9 +111,8 @@ export default function Timeline() {
               style={{ transitionDelay: `${idx * 120}ms` }}
             >
               {/* Timeline Node */}
-              <div className={`absolute left-[-40px] top-4 w-6 h-6 rounded-full border-2 flex items-center justify-center z-10 group-hover:scale-125 transition-all duration-300 ${
-                isDark ? 'bg-background border-white/20 group-hover:border-primary-fixed-dim' : 'bg-white border-gray-200 group-hover:border-brand-blue'
-              }`}
+              <div className={`absolute left-[-40px] top-4 w-6 h-6 rounded-full border-2 flex items-center justify-center z-10 group-hover:scale-125 transition-all duration-300 ${isDark ? 'bg-background border-white/20 group-hover:border-primary-fixed-dim' : 'bg-white border-gray-200 group-hover:border-brand-blue'
+                }`}
                 style={{ boxShadow: `0 0 0 0px transparent`, }}
                 onMouseEnter={e => e.currentTarget.style.boxShadow = `0 0 12px ${event.glowColor}`}
                 onMouseLeave={e => e.currentTarget.style.boxShadow = 'none'}
@@ -136,13 +121,11 @@ export default function Timeline() {
               </div>
 
               {/* Event Card */}
-              <div className={`glass-panel p-md rounded-xl flex flex-col gap-xs transition-all duration-300 hover-lift group-hover:translate-x-1 ${
-                isDark ? 'hover:border-white/20' : 'hover:border-gray-200'
-              }`}>
+              <div className={`glass-panel p-md rounded-xl flex flex-col gap-xs transition-all duration-300 hover-lift group-hover:translate-x-1 ${isDark ? 'hover:border-white/20' : 'hover:border-gray-200'
+                }`}>
                 <div className="flex flex-wrap items-center justify-between gap-sm">
-                  <span className={`text-[12px] font-mono font-medium px-3 py-1 rounded-md border ${
-                    isDark ? 'text-on-surface-variant bg-white/5 border-white/10' : 'text-gray-500 bg-gray-50 border-gray-200'
-                  }`}>
+                  <span className={`text-[12px] font-mono font-medium px-3 py-1 rounded-md border ${isDark ? 'text-on-surface-variant bg-white/5 border-white/10' : 'text-gray-500 bg-gray-50 border-gray-200'
+                    }`}>
                     {event.date}
                   </span>
                   <span className={`text-[10px] font-label-caps px-3 py-1 rounded-full border ${event.accent}`}>

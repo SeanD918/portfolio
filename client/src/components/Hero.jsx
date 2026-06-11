@@ -98,9 +98,9 @@ export default function Hero() {
 
       <div className="relative z-10 w-full max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-lg items-center min-h-[calc(100vh-64px)]">
         {/* Left: Bio */}
-        <div className={`flex flex-col gap-sm transition-all duration-1000 transform ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`flex flex-col gap-sm w-full transition-all duration-1000 transform ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div
-            className="flex flex-col gap-sm"
+            className="flex flex-col gap-sm w-full"
             style={{
               transform: `translateY(${scrollY * 0.08}px)`,
               opacity: Math.max(0, 1 - scrollY / 700),
@@ -127,8 +127,8 @@ export default function Hero() {
               <span style={gradientStyle}>Mobile Apps</span>
             </h1>
 
-            <p className="font-body-lg text-body-lg max-w-xl text-on-surface-variant">
-              Software Engineering &amp; Information Systems student specializing in responsive
+            <p className={`font-body-lg text-body-lg max-w-xl ${isDark ? 'text-on-surface-variant' : 'text-gray-500'}`}>
+              Computer Science &amp; Software Engineering student specializing in responsive
               fullstack web development (React, Node.js) and high-fidelity cross-platform
               mobile apps (React Native).
             </p>

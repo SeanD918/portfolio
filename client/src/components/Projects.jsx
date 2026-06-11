@@ -27,7 +27,7 @@ export default function Projects() {
         { label: 'Database', val: 'PostgreSQL, Redis ,Mongodb' },
         { label: 'Protocol', val: 'WebSockets (Socket.io)' }
       ],
-      tags: ['REACT', 'NODE.JS', 'POSTGRESQL', 'SOCKET.IO'],
+      tags: ['REACT', 'NODE.JS', 'POSTGRESQL', 'SOCKET.IO', 'DOCKER', 'PYTHON'],
       github: '#',
       demo: 'https://ai-recognition-gules.vercel.app/'
     },
@@ -67,20 +67,19 @@ export default function Projects() {
     },
     {
       id: 4, category: 'web',
-      title: 'Distributed Task Queue Service',
-      desc: 'A background worker system executing tasks asynchronously with high-availability scheduling.',
-      longDesc: 'Built a reliable backend for processing heavy payloads like image resizing and automated PDF reports outside the web thread, featuring retry logic, dead-letter queues, and a progress supervisor GUI.',
-      challenge: 'Handling task duplication and ensuring transactional integrity during worker failures.',
-      solution: 'Implemented atomic locking (Redlock algorithm in Redis) to ensure no task is executed concurrently by multiple worker processes.',
+      title: 'E-LEARNING',
+      desc: 'A scalable, full-stack e-learning platform engineered to deliver dynamic educational content, optimized exam repositories, and low-latency asset distribution for Tunisian Baccalaureate students under heavy traffic loads.',
+      longDesc: 'Engineered a scalable e-learning web platform tailored for Tunisian Baccalaureate students. Developed a highly responsive frontend unified with a robust RESTful API to serve dynamic educational content, structured exam repositories, and automated revision modules, optimizing end-to-end data delivery for thousands of active users.',
+      challenge: 'Handling high latency and connection dropouts when thousands of concurrent users are simultaneously streaming/downloading heavy PDF exam corrections, causing database connection pools to exhaust and blocking frontend UI rendering.',
+      solution: 'Designed an asynchronous file-serving pipeline offloading heavy assets to cloud storage. Implemented Redis connection pooling and optimized database queries using indexes on exam types and years, while utilizing client-side data fetching rules (like caching or throttling) to ensure instant UI responsiveness.',
       specs: [
         { label: 'Runtime', val: 'Node.js' },
-        { label: 'Queue Broker', val: 'Redis (BullMQ)' },
-        { label: 'Datastore', val: 'MongoDB' },
+        { label: 'Database', val: 'PostgreSQL, MongoDB' },
         { label: 'Testing', val: 'Jest (94% coverage)' }
       ],
-      tags: ['NODE.JS', 'REDIS', 'MONGODB', 'DOCKER', 'JEST'],
-      github: 'https://github.com/iheb-dev/distributed-queue',
-      demo: '#'
+      tags: ['NODE.JS', 'REACT JS', 'MONGODB', 'JEST'],
+      github: '#',
+      demo: 'https://bac-web-iys2.vercel.app/'
     }
   ];
 

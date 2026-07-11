@@ -44,7 +44,7 @@ export default function Projects() {
         { label: 'Deployment', val: 'Vercel' },
         { label: 'Performance', val: 'Optimized & Responsive' }
       ],
-      tags: ['REACT', 'VITE', 'LEAFLET', 'AI'],
+      tags: ['REACT', 'NODE.JS', 'LEAFLET'],
       github: '#',
       demo: 'https://ihebrouini.me'
     },

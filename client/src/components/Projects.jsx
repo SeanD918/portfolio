@@ -46,7 +46,7 @@ export default function Projects() {
       ],
       tags: ['REACT', 'NODE.JS', 'LEAFLET'],
       github: '#',
-      demo: 'https://ihebrouini.me'
+      demo: 'https://solar-six-nu.vercel.app'
     },
     {
       id: 3, category: 'mobile',

@@ -32,21 +32,21 @@ export default function Projects() {
       demo: 'https://ai-recognition-gules.vercel.app/'
     },
     {
-      id: 2, category: 'mobile',
-      title: 'FitQuest Gym Companion App',
-      desc: 'A gamified fitness mobile application tracking workouts offline and plotting running trails.',
-      longDesc: 'Cross-platform fitness app using React Native, utilizing SQLite for fast offline storage. Structured a local synchronization pipeline to cache user metrics and push updates in batches to the Node/Postgres backend.',
-      challenge: 'Reliably synchronizing offline activity logs with database servers when connections drop.',
-      solution: 'Implemented a local retry queue in Redux Persist that caches transaction batches and dispatches synchronized bulk updates when cellular network is online.',
+      id: 2, category: 'web',
+      title: 'Solar Energy Solutions',
+      desc: 'A modern, responsive solar energy company website showcasing services, products, and renewable energy solutions with an elegant design.',
+      longDesc: 'Designed and developed a full-featured solar energy company website with a focus on performance and user experience. The site features smooth animations, responsive layouts, and engaging sections to present solar products, services, and company information effectively.',
+      challenge: 'Delivering a visually compelling and high-performance website that clearly communicates complex solar energy offerings to a broad audience.',
+      solution: 'Built with modern web technologies ensuring fast load times, accessibility, and seamless animations. Deployed on Vercel for global CDN delivery and instant scalability.',
       specs: [
-        { label: 'Core Framework', val: 'React Native (Expo)' },
-        { label: 'State Manager', val: 'Redux Toolkit' },
-        { label: 'Local Datastore', val: 'SQLite' },
-        { label: 'Target Platform', val: 'iOS & Android' }
+        { label: 'Frontend', val: 'React.js' },
+        { label: 'Styling', val: 'CSS / Tailwind' },
+        { label: 'Deployment', val: 'Vercel' },
+        { label: 'Performance', val: 'Optimized & Responsive' }
       ],
-      tags: ['REACT NATIVE', 'SQLITE', 'REDUX', 'EXPO'],
-      github: 'https://github.com/iheb-dev/fitquest-mobile',
-      demo: '#'
+      tags: ['REACT', 'VITE', 'LEAFLET', 'AI'],
+      github: '#',
+      demo: 'https://ihebrouini.me'
     },
     {
       id: 3, category: 'mobile',
